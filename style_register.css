@@ -126,6 +126,7 @@ main form .input-group input{
     border: none;
     outline: none;
     box-shadow: 0 5px 10px black;
+    position: relative;
 }
 
 main form .input-group .icon-input{

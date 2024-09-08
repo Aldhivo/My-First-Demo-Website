@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register Form</title>
+    <link rel="stylesheet" href="style_register.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+</head>
+<body>
+    <header>
+        <div class="web-name">
+            <h4>ALDHIVO</h4>
+        </div>
+        <div class="nav hidden" id="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Contact</a>
+            <i class="fa fa-xmark" id="close-menu"></i>
+        </div>
+
+        <div class="icon-user">
+            <a href="index.html">
+                <i class="fa-solid fa-user-circle"></i>
+            </a>
+        </div>
+
+        <div class="icon-menu">
+            <i class="fa-solid fa-bars" id="open-menu"></i>
+        </div>
+    </header>
+
+    <main>
+        <form>
+            <h2>Register</h2>
+
+            <div class="input-group">
+                <input type="text" placeholder="User Name">
+                <input type="email" placeholder="Your email">
+                <input type="password" id="password" placeholder="Your password">
+                <input type="password" id="cnfrm-password" placeholder="Confirm password">
+                <span id="message">Demo Teks</span>
+                <button type="button" id="button">Sign in</button>
+
+                <div class="icon-input">
+                    <i class="fa-solid fa-user-circle"></i>
+                    <i class="fa-solid fa-envelope"></i>
+                    <i class="fa-solid fa-lock"></i>
+                    <i class="fa-solid fa-lock"></i>
+                    <i class="fa-solid fa-eye-slash eye1" id="eye1"></i>
+                    <i class="fa-solid fa-eye-slash eye2" id="eye2"></i>
+                </div>
+            </div>
+
+            <div class="or">
+                <span>------OR------</span>
+                <p>Sign in with Google account</p>
+                <i class="fa-brands fa-google"></i>
+            </div>
+        </form>
+    </main>
+
+    <script src="script_register.js"></script>
+</body>
+</html>

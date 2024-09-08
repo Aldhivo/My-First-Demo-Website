@@ -1,0 +1,262 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --color-dark : #0d2f2b;
+    --color-medium : #33FF66;
+    --color-light : #33FFC2;
+    background-color: var(--color-dark);
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    color: white;
+}
+
+header .web-name{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+    position: relative;
+}
+
+header .web-name::before{
+    content: '';
+    position: absolute;
+    background-color: var(--color-dark);
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    animation: showRight 1.5s ease forwards;
+    animation-delay: 0.4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes showRight{
+    100%{
+        width: 0;
+    }
+}
+
+header .nav{
+    display: flex;
+    gap: 30px;
+    margin: 0 10px;
+    position: relative;
+}
+
+header .nav a{
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    align-content: center;
+}
+
+header .nav a::before{
+    content: '';
+    position: absolute;
+    bottom: 16px;
+    width: 0;
+    height: 3px;
+    border-radius: 30px;
+    background: linear-gradient(to right,#33FF66,#33FFC2);
+    box-shadow:
+    0 3px 8px var(--color-dark),
+    0 5px 10px var(--color-medium),
+    0 10px 30px var(--color-light);
+    transition: 1s;
+}
+
+header .nav a:hover::before{
+    width: 56px;
+}
+
+header .nav i{
+    font-size: 30px;
+    align-content: center;
+    display: none;
+}
+
+header .icon-user{
+    font-size: 30px;
+    align-content: center;
+}
+
+header .icon-user a i{
+    color: white;
+}
+
+header .icon-user a i:active{
+    color: white;
+}
+
+header .icon-menu{
+    font-size: 30px;
+    align-content: center;
+    display: none;
+}
+
+main form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    width: 300px;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 5px;
+    box-shadow: 0 10px 30px black;
+    position: relative;
+}
+
+main form .input-group{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    position: relative;
+}
+
+main form .input-group input{
+    padding: 10px 0;
+    padding-left: 40px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: 0 5px 10px black;
+}
+
+main form .input-group .icon-input{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    position: absolute;
+    gap: 7px;
+}
+
+main form .input-group .icon-input i{
+    background-color: var(--color-dark);
+    padding: 10px 5px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    color: white;
+}
+
+main form .input-group .icon-input .fa-eye-slash{
+    position: relative;
+    background-color: transparent;
+    color: black;
+    top: -90px;
+    left: 170px;
+    cursor: pointer;
+}
+
+
+main form .input-group span{
+    text-align: left;
+    color: white;
+}
+
+main form .input-group button{
+    padding-left: 0;
+    padding: 7px 0;
+    border: 2px solid var(--color-medium);
+    cursor: pointer;
+    position: relative;
+    border-radius: 5px;
+    z-index: 1;
+    box-shadow: 0 5px 10px black;
+    transition: color 1s;
+}
+
+main form .input-group button:hover{
+    color: white;
+}
+
+main form .input-group button::before{
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 100%;
+    background-color: var(--color-medium);
+    top: 0;
+    left: 0;
+    transition: 1s;
+    z-index: -1;
+}
+
+main form .input-group button:hover::before{
+    width: 100%;
+}
+
+main form .or{
+    margin: 20px 0;
+}
+
+main form .or i{
+    font-size: 30px;
+    padding: 10px;
+    border: 2px solid var(--color-medium);
+    border-radius: 100%;
+    cursor: pointer;
+    position: relative;
+    transition: 1s;
+}
+
+main form .or i:hover{
+    background-color: var(--color-medium);
+    color: white;
+    box-shadow:
+    0 0 5px var(--color-dark),
+    0 0 15px var(--color-medium),
+    0 0 25px var(--color-light);
+    animation: slideInTop 1s ease;
+}
+
+@keyframes slideInTop{
+    from{
+        transform:translateY(7px);
+    }
+    
+    to{
+        transform:translateY(0);
+    }
+}
+
+@media only screen and (max-width:425px){
+    
+    header .nav{
+        position: fixed;
+        display: flex;
+        flex-direction: column;
+        z-index: 2;
+        background-color: #134640;
+        padding: 100px;
+        height: 100%;
+        width: 130px;
+        margin-left: 99px;
+        margin-top: -10px;
+    }
+
+    header .nav i{
+        display: block;
+        position: fixed;
+        top: 24px;
+        right: 16px;
+    }
+
+    header .hidden{
+        display: none;
+    }
+
+    header .icon-menu{
+        display: block;
+    }
+
+    header .icon-user{
+        position: relative;
+        left: 100px;
+    }
+}

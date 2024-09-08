@@ -147,11 +147,11 @@ main form .input-group .icon-input i{
 }
 
 main form .input-group .icon-input .fa-eye-slash{
-    position: absolute;
+    position: relative;
     background-color: transparent;
     color: black;
     left: 170px;
-    top: 45px;
+    top: -45px;
     cursor: pointer;
 }
 
